@@ -1,0 +1,18 @@
+/*hide right bar*/
+#guide-renderer{
+	display: none;
+}
+
+/* Homepage ad */
+#page-manager > YTD-BROWSE.style-scope.ytd-page-manager:first-child{
+	display: none;
+}
+
+/* upnext suggestion after a video is finished */
+#secondary-inner,#secondary{
+		display: none;
+}
+
+#primary > YTD-RICH-GRID-RENDERER.style-scope.ytd-two-column-browse-results-renderer{
+	display: none;
+}
