@@ -1,14 +1,82 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-<center style="margin-top:10px;">Developed By <a href="http://github.com/abhishekjnvk" target="_blank">Abhishek Kumar</a>
-<br><br>  <br>
-<a href="https://paypal.me/abhishekjnvk?locale.x=en_GB" target="_blank">
-<img src="images/donate.png"></a>
-</center><br><br>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Page</title>
+
+  <link rel="stylesheet" href="code/lib/bootstrap.css">
+  <link rel="stylesheet" href="code/popup.css">
+  <script type="text/javascript" src="code/lib/jquery.js"></script>
+  <script type="text/javascript" src="code/lib/bootstrap.js"></script>
+  <script type="text/javascript" src="code/main.js"></script>
+</head>
+
+<body class="container" style="width:250px">
+  <h6 class="text-center text-primary mt-2">Youtube Suggestion Remover</h6>
+
+  <table class="table">
+    <tbody>
+      <tr>
+        <td><small>Hide Homepage Suggestion </small></td>
+        <td>
+          <label class="switch">
+            <input type="checkbox" id="homepage_suggestion">
+            <span class="slider round"></span>
+          </label>
+        </td>
+      </tr>
+      <tr>
+        <td><small>Hide Homepage Sidebar. </small></td>
+        <td>
+          <label class="switch">
+            <input type="checkbox" id="homepage_sidebar">
+            <span class="slider round"></span>
+          </label>
+        </td>
+      </tr>
+      <tr>
+        <td><small>Hide Up-next Suggestion </small></td>
+        <td>
+          <label class="switch">
+            <input type="checkbox" id="upnext_suggestion">
+            <span class="slider round"></span>
+          </label>
+        </td>
+      </tr>
+      <tr>
+        <td><small>Show Direct Search</small> <a tabindex="0" id="alert_other_site" class="text-primary" role="button"
+            data-toggle="popover" data-trigger="focus" title="Direct Search"
+            data-content="select text & right click for option of youtube search. It will be effected on next restart of browser">
+            &#x24d8</a>
+        </td>
+
+        <td>
+          <label class="switch">
+            <input type="checkbox" id="create_context">
+            <span class="slider round"></span>
+          </label>
+        </td>
+      </tr>
+      <tr>
+        <form action="http://www.youtube.com/results" metdod="GET">
+          <td colspan="2"><input name="search_query" id="search_on_yt" class="form-control"
+              placeholder="Search On Youtube"></td>
+        </form>
+      </tr>
+    </tbody>
+  </table>
+
+  <center><small>Developed By <br><a href="http://github.com/abhishekjnvk" target="_blank">Abhishek Kumar</a></small>
+  </center>
+  <a tabindex="0" id="alert_other_site" class="btn-danger" role="button" data-toggle="popover" data-trigger="focus"
+    title="Other Site Alert"
+    data-content="This Extension is for youtube website all the changes will be visible to youtube.com only">
+    &#x24d8</a>
+  <a href="https://paypal.me/abhishekjnvk?locale.x=en_GB" target="_blank" class="float-right">
+    <img src="images/donate.png" width="60px">
+    <br>
+  </a>
+</body>
+
 </html>

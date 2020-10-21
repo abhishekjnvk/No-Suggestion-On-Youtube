@@ -1,17 +1,35 @@
-{ "browser_action": {
-    "default_icon":{ "128": "icon_128.png" },
+{
+  "browser_action": {
+    "default_icon": {
+      "128": "icon_128.png"
+    },
     "default_popup": "popup.html",
     "default_title": "Hide Suggestions On Youtube"
- },
+  },
   "manifest_version": 2,
   "name": "No Suggestions On Youtube",
   "description": "Focus on your work by hiding suggestions of youtube",
   "version": "1.0.0",
-  "icons": { "128": "icon_128.png" },
-  "content_scripts":[
-    {
-    "matches":["https://www.youtube.com/*"],
-    "css": ["content.css"]
-  }
-  ]
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "background": {
+    "scripts": [
+      "code/lib/jquery.js",
+      "code/lib/bootstrap.js",
+      "code/main.js",
+      "code/yt.js",
+      "code/bg.js"
+    ]
+  },
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "storage"
+  ],
+  "content_scripts": [{
+    "matches": ["https://*.youtube.com/*"],
+    "js": ["code/lib/jquery.js", "code/yt.js"],
+    "css": ["code/content.css"]
+  }]
 }
